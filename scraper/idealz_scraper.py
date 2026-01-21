@@ -1,4 +1,4 @@
-# scraper/idealz_scraper.py - Scraper for your own shop (IdealZ)
+# scraper/idealz_scraper.py - Custom scraper for IdealZ (React/Vue app)
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -6,11 +6,11 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
+import re
 
 def scrape_idealz(url="https://idealzpricelist.netlify.app/"):
     """
-    Scrape IdealZ price list
-    Returns products with both standard and cash prices
+    Scrape IdealZ price list - Custom for React/Vue app
     """
     chrome_options = Options()
     chrome_options.add_argument("--headless")
@@ -26,83 +26,132 @@ def scrape_idealz(url="https://idealzpricelist.netlify.app/"):
         driver = webdriver.Chrome(options=chrome_options)
         driver.get(url)
         
-        # Wait for the page to load
-        wait = WebDriverWait(driver, 15)
-        time.sleep(5)  # Extra wait for JS rendering
+        # Wait longer for React/Vue to render
+        print("  Waiting for page to load...")
+        time.sleep(8)
         
-        # Try multiple approaches to extract data
-        
-        # Approach 1: Try to execute JavaScript to get the data
+        # Click on iPhone tab to load products
         try:
-            script = """
-                let items = [];
-                const rows = document.querySelectorAll('table tbody tr');
-                rows.forEach(row => {
-                    const cells = row.querySelectorAll('td');
-                    if (cells.length >= 3) {
-                        items.push({
-                            product: cells[0].textContent.trim(),
-                            standard: cells[1].textContent.trim(),
-                            cash: cells[2].textContent.trim()
-                        });
-                    }
-                });
-                return items;
-            """
-            items_data = driver.execute_script(script)
+            iphone_button = driver.find_element(By.XPATH, "//button[contains(text(), 'iPhone')]")
+            iphone_button.click()
+            time.sleep(3)
+        except:
+            print("  Could not click iPhone button, trying alternative...")
+        
+        # Get all text content from the page
+        page_text = driver.find_element(By.TAG_NAME, "body").text
+        
+        # Parse the text to extract products
+        # Format appears to be: "Product Name    Rs. XXX,XXX    Rs. XXX,XXX"
+        lines = page_text.split('\n')
+        
+        for i, line in enumerate(lines):
+            line = line.strip()
             
-            for item in items_data:
-                if not item['product']:
-                    continue
+            # Skip empty lines and headers
+            if not line or line in ['Price List', 'Apple Care', 'Genext', 'Company', 
+                                     'Apple Devices', 'Android Devices', 'Accessories',
+                                     'iPhone', 'Mac & iPad', 'Watch & Accessories']:
+                continue
+            
+            # Look for lines with "iPhone", "iPad", "MacBook", "AirPods", "Watch", "Samsung"
+            if any(keyword in line for keyword in ['iPhone', 'iPad', 'MacBook', 'AirPods', 'Watch', 'Galaxy', 'Samsung']):
+                # Check if next lines contain prices
+                try:
+                    # Pattern: Product name on one line, prices on next lines
+                    product_name = line
                     
-                product_name = item['product']
-                standard_price = "".join(c for c in item['standard'] if c.isdigit())
-                cash_price = "".join(c for c in item['cash'] if c.isdigit())
-                
-                if product_name and standard_price:
-                    category = categorize_product(product_name)
-                    products.append({
-                        "site": "IdealZ (Your Shop)",
-                        "category": category,
-                        "product": product_name,
-                        "price_LKR": int(standard_price),
-                        "cash_price_LKR": int(cash_price) if cash_price else int(standard_price),
-                        "is_own_shop": True
-                    })
-        except Exception as e:
-            print(f"  ⚠ JavaScript extraction failed: {e}")
+                    # Look ahead for price lines
+                    standard_price = None
+                    cash_price = None
+                    
+                    for j in range(1, 4):  # Check next 3 lines
+                        if i + j < len(lines):
+                            next_line = lines[i + j].strip()
+                            
+                            # Extract prices using regex
+                            prices = re.findall(r'Rs\.\s*([\d,]+)', next_line)
+                            
+                            if len(prices) >= 2:
+                                standard_price = prices[0].replace(',', '')
+                                cash_price = prices[1].replace(',', '')
+                                break
+                            elif len(prices) == 1:
+                                standard_price = prices[0].replace(',', '')
+                                cash_price = standard_price
+                                break
+                    
+                    # If we found prices in the same line
+                    if not standard_price:
+                        prices = re.findall(r'Rs\.\s*([\d,]+)', line)
+                        if len(prices) >= 2:
+                            # Extract product name (remove prices)
+                            product_name = re.sub(r'Rs\.\s*[\d,]+', '', line).strip()
+                            standard_price = prices[0].replace(',', '')
+                            cash_price = prices[1].replace(',', '')
+                        elif len(prices) == 1:
+                            product_name = re.sub(r'Rs\.\s*[\d,]+', '', line).strip()
+                            standard_price = prices[0].replace(',', '')
+                            cash_price = standard_price
+                    
+                    if standard_price and len(standard_price) >= 4:
+                        category = categorize_product(product_name)
+                        
+                        products.append({
+                            "site": "IdealZ (Your Shop)",
+                            "category": category,
+                            "product": product_name,
+                            "price_LKR": int(standard_price),
+                            "cash_price_LKR": int(cash_price) if cash_price else int(standard_price),
+                            "is_own_shop": True
+                        })
+                        
+                except Exception as e:
+                    continue
+        
+        # Alternative approach: Try to find product elements by class or structure
+        if len(products) == 0:
+            print("  Trying alternative extraction method...")
             
-            # Approach 2: Try traditional DOM parsing
-            try:
-                rows = driver.find_elements(By.CSS_SELECTOR, "table tbody tr")
-                
-                for row in rows:
-                    try:
-                        cells = row.find_elements(By.TAG_NAME, "td")
-                        if len(cells) >= 3:
-                            product_name = cells[0].text.strip()
-                            standard_price = cells[1].text.strip()
-                            cash_price = cells[2].text.strip()
+            # Look for all div elements that might contain products
+            elements = driver.find_elements(By.XPATH, "//*[contains(text(), 'iPhone') or contains(text(), 'iPad') or contains(text(), 'MacBook')]")
+            
+            for elem in elements:
+                try:
+                    text = elem.text.strip()
+                    if 'Rs.' in text:
+                        # Extract product and prices
+                        prices = re.findall(r'Rs\.\s*([\d,]+)', text)
+                        product_name = re.sub(r'Rs\.\s*[\d,]+', '', text).strip()
+                        
+                        if prices and product_name:
+                            standard_price = prices[0].replace(',', '')
+                            cash_price = prices[1].replace(',', '') if len(prices) > 1 else standard_price
                             
-                            # Extract numeric values
-                            standard_numeric = "".join(c for c in standard_price if c.isdigit())
-                            cash_numeric = "".join(c for c in cash_price if c.isdigit())
-                            
-                            if product_name and standard_numeric:
+                            if len(standard_price) >= 4:
                                 category = categorize_product(product_name)
                                 
                                 products.append({
                                     "site": "IdealZ (Your Shop)",
                                     "category": category,
                                     "product": product_name,
-                                    "price_LKR": int(standard_numeric),
-                                    "cash_price_LKR": int(cash_numeric) if cash_numeric else int(standard_numeric),
+                                    "price_LKR": int(standard_price),
+                                    "cash_price_LKR": int(cash_price),
                                     "is_own_shop": True
                                 })
-                    except:
-                        continue
-            except Exception as e2:
-                print(f"  ✗ DOM parsing also failed: {e2}")
+                except:
+                    continue
+        
+        # Remove duplicates
+        seen = set()
+        unique_products = []
+        for p in products:
+            key = (p['product'], p['price_LKR'])
+            if key not in seen:
+                seen.add(key)
+                unique_products.append(p)
+        
+        products = unique_products
                 
     except Exception as e:
         print(f"  ✗ Error scraping IdealZ: {e}")
@@ -132,12 +181,8 @@ def categorize_product(product_name):
         return "IdealZ Accessories"
 
 def save_idealz_prices_to_config(products):
-    """
-    Extract prices and save to a dictionary format
-    This can be used to update MY_PRICES in config.py
-    """
+    """Extract prices and save to dictionary"""
     my_prices = {}
     for product in products:
         my_prices[product['product']] = product['price_LKR']
-    
     return my_prices

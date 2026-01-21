@@ -1,4 +1,4 @@
-# scraper/woocommerce_scraper.py - Generic scraper for WooCommerce sites
+# scraper/woocommerce_scraper.py - Improved WooCommerce scraper
 
 import requests
 from bs4 import BeautifulSoup
@@ -7,86 +7,98 @@ import time
 def scrape_woocommerce_site(url, category, site_name):
     """
     Generic scraper for WooCommerce-based sites
-    Works for: PresentSolution, DoctorMobile, GeniusMobile, LifeMobile, GQMobiles, XMobile
     """
     products = []
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
         'Accept-Language': 'en-US,en;q=0.5',
-        'Accept-Encoding': 'gzip, deflate, br',
         'Connection': 'keep-alive',
-        'Upgrade-Insecure-Requests': '1'
     }
     
     try:
-        # Try first 3 pages for each category
-        for page in range(1, 4):
+        # Try first 2 pages
+        for page in range(1, 3):
             page_url = f"{url}page/{page}/" if page > 1 else url
             
             try:
-                response = requests.get(page_url, headers=headers, timeout=15)
+                print(f"    Fetching: {page_url}")
+                response = requests.get(page_url, headers=headers, timeout=20)
+                
                 if response.status_code != 200:
+                    print(f"    Status code: {response.status_code}")
                     break
-            except:
+                    
+            except Exception as e:
+                print(f"    Request failed: {e}")
                 break
                 
             soup = BeautifulSoup(response.content, 'html.parser')
             
-            # WooCommerce product selectors (try multiple patterns)
+            # Multiple selector patterns
             selectors = [
                 'li.product',
                 'div.product',
-                'article.product',
-                'div.product-small',
-                'div.product-grid-item',
                 'li.product-type-simple',
-                'div.product-inner'
+                'div.product-small',
+                '.products li',
+                'ul.products li',
             ]
             
             product_elements = []
             for selector in selectors:
                 product_elements = soup.select(selector)
                 if product_elements:
+                    print(f"    Using selector: {selector} (found {len(product_elements)})")
                     break
             
             if not product_elements:
+                print(f"    No products found with any selector")
                 break
             
-            page_products_found = 0
+            page_found = 0
             
             for product in product_elements:
                 try:
-                    # Extract product name - try multiple selectors
-                    name_elem = (
-                        product.select_one('h2.woocommerce-loop-product__title') or
-                        product.select_one('h3.product-title') or
-                        product.select_one('h2.product-title') or
-                        product.select_one('.product-title') or
-                        product.select_one('a.woocommerce-LoopProduct-link') or
-                        product.select_one('.woocommerce-loop-product__title')
-                    )
+                    # Find name
+                    name_selectors = [
+                        'h2.woocommerce-loop-product__title',
+                        'h3.product-title',
+                        'h2.product-title',
+                        '.product-title',
+                        'a.woocommerce-LoopProduct-link',
+                    ]
                     
-                    # Extract price - try multiple selectors
-                    price_elem = (
-                        product.select_one('span.woocommerce-Price-amount.amount') or
-                        product.select_one('span.price ins span.amount') or
-                        product.select_one('span.price span.amount') or
-                        product.select_one('ins span.amount') or
-                        product.select_one('.price ins .woocommerce-Price-amount') or
-                        product.select_one('.price .woocommerce-Price-amount') or
-                        product.select_one('.price')
-                    )
+                    name_elem = None
+                    for sel in name_selectors:
+                        name_elem = product.select_one(sel)
+                        if name_elem:
+                            break
+                    
+                    # Find price
+                    price_selectors = [
+                        'span.woocommerce-Price-amount.amount',
+                        'ins span.amount',
+                        'span.price span.amount',
+                        '.price ins .amount',
+                        '.price .amount',
+                        'span.amount',
+                    ]
+                    
+                    price_elem = None
+                    for sel in price_selectors:
+                        price_elem = product.select_one(sel)
+                        if price_elem:
+                            break
                     
                     if name_elem and price_elem:
                         name = name_elem.get_text(strip=True)
                         price_text = price_elem.get_text(strip=True)
                         
-                        # Extract numeric price
+                        # Extract digits
                         price = "".join(c for c in price_text if c.isdigit())
                         
-                        # Sanity checks
-                        if price and name and len(price) >= 4:  # At least 1000 LKR
+                        if price and name and len(price) >= 4:
                             products.append({
                                 "site": site_name,
                                 "category": category,
@@ -94,17 +106,19 @@ def scrape_woocommerce_site(url, category, site_name):
                                 "price_LKR": int(price),
                                 "is_own_shop": False
                             })
-                            page_products_found += 1
+                            page_found += 1
+                            
                 except Exception as e:
                     continue
             
-            # If no products found on this page, don't try next page
-            if page_products_found == 0:
-                break
+            print(f"    Found {page_found} products on page {page}")
             
-            time.sleep(1)  # Be polite between pages
+            if page_found == 0:
+                break
+                
+            time.sleep(2)
             
     except Exception as e:
-        print(f"  ✗ Error scraping {url}: {e}")
+        print(f"    Error: {e}")
     
     return products

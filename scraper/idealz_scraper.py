@@ -7,6 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 import re
+from scraper.utils import parse_price
 
 def scrape_idealz(url="https://idealzpricelist.netlify.app/"):
     """
@@ -73,11 +74,11 @@ def scrape_idealz(url="https://idealzpricelist.netlify.app/"):
                             prices = re.findall(r'Rs\.\s*([\d,]+)', next_line)
                             
                             if len(prices) >= 2:
-                                standard_price = prices[0].replace(',', '')
-                                cash_price = prices[1].replace(',', '')
+                                standard_price = parse_price(prices[0])
+                                cash_price = parse_price(prices[1])
                                 break
                             elif len(prices) == 1:
-                                standard_price = prices[0].replace(',', '')
+                                standard_price = parse_price(prices[0])
                                 cash_price = standard_price
                                 break
                     
@@ -87,22 +88,22 @@ def scrape_idealz(url="https://idealzpricelist.netlify.app/"):
                         if len(prices) >= 2:
                             # Extract product name (remove prices)
                             product_name = re.sub(r'Rs\.\s*[\d,]+', '', line).strip()
-                            standard_price = prices[0].replace(',', '')
-                            cash_price = prices[1].replace(',', '')
+                            standard_price = parse_price(prices[0])
+                            cash_price = parse_price(prices[1])
                         elif len(prices) == 1:
                             product_name = re.sub(r'Rs\.\s*[\d,]+', '', line).strip()
-                            standard_price = prices[0].replace(',', '')
+                            standard_price = parse_price(prices[0])
                             cash_price = standard_price
                     
-                    if standard_price and len(standard_price) >= 4:
+                    if standard_price:
                         category = categorize_product(product_name)
                         
                         products.append({
                             "site": "IdealZ (Your Shop)",
                             "category": category,
                             "product": product_name,
-                            "price_LKR": int(standard_price),
-                            "cash_price_LKR": int(cash_price) if cash_price else int(standard_price),
+                            "price_LKR": standard_price,
+                            "cash_price_LKR": cash_price if cash_price else standard_price,
                             "is_own_shop": True
                         })
                         
@@ -125,18 +126,18 @@ def scrape_idealz(url="https://idealzpricelist.netlify.app/"):
                         product_name = re.sub(r'Rs\.\s*[\d,]+', '', text).strip()
                         
                         if prices and product_name:
-                            standard_price = prices[0].replace(',', '')
-                            cash_price = prices[1].replace(',', '') if len(prices) > 1 else standard_price
+                            standard_price = parse_price(prices[0])
+                            cash_price = parse_price(prices[1]) if len(prices) > 1 else standard_price
                             
-                            if len(standard_price) >= 4:
+                            if standard_price:
                                 category = categorize_product(product_name)
                                 
                                 products.append({
                                     "site": "IdealZ (Your Shop)",
                                     "category": category,
                                     "product": product_name,
-                                    "price_LKR": int(standard_price),
-                                    "cash_price_LKR": int(cash_price),
+                                    "price_LKR": standard_price,
+                                    "cash_price_LKR": cash_price,
                                     "is_own_shop": True
                                 })
                 except:

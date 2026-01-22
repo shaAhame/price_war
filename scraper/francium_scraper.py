@@ -4,6 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 import time
+from scraper.utils import parse_price
 
 def scrape_francium(url, category):
     """Scrape Francium.lk pages"""
@@ -29,14 +30,15 @@ def scrape_francium(url, category):
             try:
                 name = card.find_element(By.CSS_SELECTOR, ".product-card__title").text.strip()
                 price_text = card.find_element(By.CSS_SELECTOR, ".price").text
-                price = "".join(c for c in price_text if c.isdigit())
+                
+                price = parse_price(price_text)
                 
                 if price and name:
                     products.append({
                         "site": "Francium",
                         "category": category,
                         "product": name,
-                        "price_LKR": int(price),
+                        "price_LKR": price,
                         "is_own_shop": False
                     })
             except:

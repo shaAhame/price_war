@@ -75,53 +75,76 @@ def load_my_prices():
     return {}
 
 def extract_model_number(product_name):
-    """Extract iPhone model number (e.g., '15 Pro', '14', '16 Pro Max')"""
-    # Look for patterns like "iPhone 15 Pro Max", "iPhone 14", etc.
-    pattern = r'iPhone\s+(\d+(?:\s+(?:Pro|Plus|Max|Mini|SE|e|E))*)'
-    match = re.search(pattern, product_name, re.IGNORECASE)
+    """Extract model number with variant (e.g., '17 pro max', '15', '16 plus')"""
+    product_lower = product_name.lower()
     
+    # iPhone patterns
+    iphone_pattern = r'iphone\s+(\d+(?:\s*(?:pro\s*max|pro|plus|mini|e))?)'
+    match = re.search(iphone_pattern, product_lower)
     if match:
-        return match.group(1).strip().lower()
+        model = match.group(1).strip()
+        # Normalize spacing
+        model = re.sub(r'\s+', ' ', model)
+        return model
     
-    # Also check for iPad, MacBook, AirPods
-    if 'ipad' in product_name.lower():
-        pattern = r'iPad\s+(\w+(?:\s+\w+)*)'
-        match = re.search(pattern, product_name, re.IGNORECASE)
+    # iPad patterns
+    if 'ipad' in product_lower:
+        ipad_pattern = r'ipad\s+(\w+(?:\s+\w+)*)'
+        match = re.search(ipad_pattern, product_lower)
         if match:
-            return match.group(1).strip().lower()
+            return match.group(1).strip()
     
-    if 'macbook' in product_name.lower():
-        pattern = r'MacBook\s+(\w+(?:\s+\w+)*)'
-        match = re.search(pattern, product_name, re.IGNORECASE)
+    # MacBook patterns
+    if 'macbook' in product_lower:
+        mac_pattern = r'macbook\s+(\w+(?:\s+\w+)*)'
+        match = re.search(mac_pattern, product_lower)
         if match:
-            return match.group(1).strip().lower()
+            return match.group(1).strip()
     
-    if 'airpod' in product_name.lower():
-        pattern = r'AirPod[s]?\s+(\w+(?:\s+\w+)*)'
-        match = re.search(pattern, product_name, re.IGNORECASE)
+    # AirPods patterns
+    if 'airpod' in product_lower:
+        airpod_pattern = r'airpods?\s+(\w+(?:\s+\w+)*)'
+        match = re.search(airpod_pattern, product_lower)
         if match:
-            return match.group(1).strip().lower()
+            return match.group(1).strip()
     
-    if 'watch' in product_name.lower():
-        pattern = r'Watch\s+(\w+(?:\s+\w+)*)'
-        match = re.search(pattern, product_name, re.IGNORECASE)
+    # Watch patterns
+    if 'watch' in product_lower:
+        watch_pattern = r'watch\s+(\w+(?:\s+\w+)*)'
+        match = re.search(watch_pattern, product_lower)
         if match:
-            return match.group(1).strip().lower()
+            return match.group(1).strip()
     
     return None
 
 def extract_storage(product_name):
-    """Extract storage capacity (e.g., '128GB', '256GB')"""
-    pattern = r'(\d+(?:GB|TB))'
-    match = re.search(pattern, product_name, re.IGNORECASE)
+    """Extract storage capacity (e.g., '128GB', '256GB', '1TB')"""
+    # Look for storage patterns
+    storage_pattern = r'(\d+\s*(?:GB|TB))'
+    match = re.search(storage_pattern, product_name, re.IGNORECASE)
     
     if match:
-        return match.group(1).upper()
+        storage = match.group(1).upper().replace(' ', '')
+        return storage
     
     return None
 
+def normalize_storage(storage):
+    """Normalize storage format (e.g., '1TB' -> '1024GB' for comparison)"""
+    if not storage:
+        return None
+    
+    storage_upper = storage.upper()
+    
+    if 'TB' in storage_upper:
+        # Convert TB to GB
+        tb_value = int(re.findall(r'\d+', storage_upper)[0])
+        return f"{tb_value * 1024}GB"
+    
+    return storage_upper
+
 def models_match(model1, model2):
-    """Check if two model numbers are the same"""
+    """Check if two model numbers match exactly"""
     if not model1 or not model2:
         return False
     
@@ -129,63 +152,65 @@ def models_match(model1, model2):
     m1 = model1.lower().strip()
     m2 = model2.lower().strip()
     
+    # Remove extra spaces
+    m1 = re.sub(r'\s+', ' ', m1)
+    m2 = re.sub(r'\s+', ' ', m2)
+    
     # Exact match
     if m1 == m2:
         return True
     
-    # Handle variations (e.g., "15 pro" vs "15pro")
-    m1_clean = m1.replace(' ', '')
-    m2_clean = m2.replace(' ', '')
+    # Remove all spaces for comparison
+    m1_nospace = m1.replace(' ', '')
+    m2_nospace = m2.replace(' ', '')
     
-    return m1_clean == m2_clean
+    return m1_nospace == m2_nospace
 
 def find_price_wars(df, my_prices=None, threshold=5):
-    """Find products where competitors are significantly cheaper - with smart matching"""
+    """Find products where competitors are significantly cheaper - with simplistic matching"""
     alerts = []
     
-    your_products = df[df['is_own_shop'] == True]
-    competitor_products = df[df['is_own_shop'] == False]
+    your_products = df[df['is_own_shop'] == True].copy()
+    competitor_products = df[df['is_own_shop'] == False].copy()
     
-    if your_products.empty and not my_prices:
+    # Filter out zero prices
+    your_products = your_products[your_products['price_LKR'] > 0]
+    competitor_products = competitor_products[competitor_products['price_LKR'] > 0]
+    
+    if your_products.empty:
         return pd.DataFrame()
     
-    if not your_products.empty:
-        for _, your_product in your_products.iterrows():
-            my_name = your_product['product']
-            my_price = your_product['price_LKR']
+    for _, your_product in your_products.iterrows():
+        my_name = your_product['product']
+        my_price = your_product['price_LKR']
+        
+        # Extract details
+        my_model = extract_model_number(my_name)
+        my_storage = extract_storage(my_name)
+        
+        if not my_model:
+            continue
+        
+        # Find partial matches
+        for _, competitor in competitor_products.iterrows():
+            comp_name = competitor['product']
+            comp_price = competitor['price_LKR']
             
-            if pd.isna(my_price) or my_price == 0:
-                continue
-            
-            # Extract model number from your product
-            my_model = extract_model_number(my_name)
-            my_storage = extract_storage(my_name)
-            
-            # Find similar products
-            for _, competitor in competitor_products.iterrows():
-                comp_price = competitor['price_LKR']
-                comp_name = competitor['product']
+            # Simple containment check
+            # e.g. if "iPhone 13" is in competitor name
+            if my_model.lower() in comp_name.lower():
                 
-                # Skip if competitor price is 0 or invalid
-                if pd.isna(comp_price) or comp_price == 0:
-                    continue
-                
-                # Extract competitor model
-                comp_model = extract_model_number(comp_name)
+                # If I have storage defined, competitor must match it if they have it
                 comp_storage = extract_storage(comp_name)
-                
-                # Only compare if models match
-                if not models_match(my_model, comp_model):
-                    continue
-                
-                # Check storage capacity similarity (if both have storage info)
-                if my_storage and comp_storage and my_storage != comp_storage:
-                    continue
+                if my_storage and comp_storage:
+                     if normalize_storage(my_storage) != normalize_storage(comp_storage):
+                        continue
                 
                 # Calculate price difference
                 price_diff = ((my_price - comp_price) / my_price) * 100
                 
-                if price_diff > threshold and price_diff < 100:  # Reasonable range
+                # Only show significant and realistic differences
+                if threshold < price_diff < 95:
                     alerts.append({
                         'my_product': my_name,
                         'my_price': my_price,
@@ -193,52 +218,16 @@ def find_price_wars(df, my_prices=None, threshold=5):
                         'competitor_product': comp_name,
                         'competitor_price': comp_price,
                         'savings_percent': round(price_diff, 1),
-                        'savings_amount': my_price - comp_price
-                    })
-    
-    elif my_prices:
-        # Fallback to manual prices
-        for my_product, my_price in my_prices.items():
-            if my_price == 0:
-                continue
-            
-            my_model = extract_model_number(my_product)
-            my_storage = extract_storage(my_product)
-            
-            for _, competitor in competitor_products.iterrows():
-                comp_price = competitor['price_LKR']
-                comp_name = competitor['product']
-                
-                if pd.isna(comp_price) or comp_price == 0:
-                    continue
-                
-                comp_model = extract_model_number(comp_name)
-                comp_storage = extract_storage(comp_name)
-                
-                if not models_match(my_model, comp_model):
-                    continue
-                
-                if my_storage and comp_storage and my_storage != comp_storage:
-                    continue
-                
-                price_diff = ((my_price - comp_price) / my_price) * 100
-                
-                if threshold < price_diff < 100:
-                    alerts.append({
-                        'my_product': my_product,
-                        'my_price': my_price,
-                        'competitor': competitor['site'],
-                        'competitor_product': comp_name,
-                        'competitor_price': comp_price,
-                        'savings_percent': round(price_diff, 1),
-                        'savings_amount': my_price - comp_price
+                        'savings_amount': my_price - comp_price,
+                        'model': my_model,
+                        'storage': my_storage
                     })
     
     return pd.DataFrame(alerts).drop_duplicates() if alerts else pd.DataFrame()
 
 # Main app
 st.title("📊 IdealZ Competitor Price Monitor")
-st.markdown("**Track your prices vs 8 competitors in real-time**")
+st.markdown("**Real-time price comparison with competitors**")
 st.markdown("---")
 
 # Load data
@@ -250,34 +239,43 @@ if df.empty:
     st.info("Run: `python scraper/main_scraper.py`")
     st.stop()
 
+# Clean data - remove zero prices
+df = df[df['price_LKR'] > 0]
+
 # Separate your shop from competitors
 your_products_df = df[df['is_own_shop'] == True]
 competitor_products_df = df[df['is_own_shop'] == False]
 
-# Filter out products with 0 prices
-your_products_df = your_products_df[your_products_df['price_LKR'] > 0]
-competitor_products_df = competitor_products_df[competitor_products_df['price_LKR'] > 0]
-
 # Sidebar filters
 st.sidebar.header("🔍 Filters")
+
+all_sites = sorted(competitor_products_df['site'].unique()) if not competitor_products_df.empty else []
 sites = st.sidebar.multiselect(
-    "Sites", 
-    sorted(competitor_products_df['site'].unique()) if not competitor_products_df.empty else [],
-    default=sorted(competitor_products_df['site'].unique())[:3] if not competitor_products_df.empty else []
+    "Competitor Sites", 
+    all_sites,
+    default=all_sites
 )
 
+all_categories = sorted(df['category'].unique())
 categories = st.sidebar.multiselect(
     "Categories", 
-    sorted(df['category'].unique()),
-    default=sorted(df['category'].unique())[:5] if len(df['category'].unique()) > 5 else sorted(df['category'].unique())
+    all_categories,
+    default=all_categories
 )
 
 if not competitor_products_df.empty:
+    min_price = int(competitor_products_df['price_LKR'].min())
+    max_price = int(competitor_products_df['price_LKR'].max())
+    
+    # Set reasonable default range (exclude outliers)
+    q1 = competitor_products_df['price_LKR'].quantile(0.25)
+    q3 = competitor_products_df['price_LKR'].quantile(0.75)
+    
     price_range = st.sidebar.slider(
         "Price Range (LKR)", 
-        int(competitor_products_df['price_LKR'].min()), 
-        int(competitor_products_df['price_LKR'].max()),
-        (int(competitor_products_df['price_LKR'].min()), int(competitor_products_df['price_LKR'].max()))
+        min_price,
+        max_price,
+        (min_price, max_price)
     )
 else:
     price_range = (0, 1000000)
@@ -297,70 +295,72 @@ with col1:
 with col2:
     st.metric("Competitor Products", len(filtered_competitor_df))
 with col3:
-    st.metric("Total Sites Monitored", df['site'].nunique())
+    st.metric("Sites Monitored", df['site'].nunique())
 with col4:
-    avg_comp_price = filtered_competitor_df['price_LKR'].mean() if not filtered_competitor_df.empty else 0
-    st.metric("Avg Competitor Price", f"LKR {avg_comp_price:,.0f}" if avg_comp_price > 0 else "N/A")
+    if not filtered_competitor_df.empty:
+        avg_price = filtered_competitor_df['price_LKR'].median()  # Use median to avoid outliers
+        st.metric("Median Competitor Price", f"LKR {avg_price:,.0f}")
+    else:
+        st.metric("Median Competitor Price", "N/A")
 
 # Price War Alerts
 st.markdown("---")
-st.header("🚨 Price War Alerts - Competitors Undercutting You")
+st.header("🚨 Price War Alerts")
 
-alerts_df = find_price_wars(df, my_prices_json)
-
-# Filter out invalid alerts
-if not alerts_df.empty:
-    alerts_df = alerts_df[
-        (alerts_df['competitor_price'] > 0) & 
-        (alerts_df['savings_percent'] > 0) & 
-        (alerts_df['savings_percent'] < 100)
-    ]
+alerts_df = find_price_wars(df, my_prices_json, threshold=5)
 
 if not alerts_df.empty:
     # Sort by savings percent
     alerts_df = alerts_df.sort_values('savings_percent', ascending=False)
     
-    st.markdown(f'<div class="alert-box alert-danger">⚠️ <b>{len(alerts_df)} competitors have lower prices!</b></div>', 
+    st.markdown(f'<div class="alert-box alert-danger">⚠️ <b>{len(alerts_df)} exact matches found where competitors are cheaper!</b></div>', 
                 unsafe_allow_html=True)
     
-    # Show top 15 alerts
-    st.subheader("🔥 Top Price Threats")
+    # Show alerts in a cleaner format
     for idx, alert in alerts_df.head(15).iterrows():
-        col1, col2 = st.columns([3, 1])
-        with col1:
-            st.markdown(f"""
-            **Your Product:** {alert['my_product']} (LKR {alert['my_price']:,.0f})  
-            **Competitor:** {alert['competitor']} - "{alert['competitor_product']}"  
-            **Their Price:** LKR {alert['competitor_price']:,.0f} 
-            """)
-        with col2:
-            st.error(f"**-{alert['savings_percent']}%**  \nLKR {alert['savings_amount']:,.0f} cheaper")
-        st.markdown("---")
+        with st.container():
+            col1, col2 = st.columns([3, 1])
+            
+            with col1:
+                st.markdown(f"""
+                **{alert['my_product']}** (LKR {alert['my_price']:,.0f})  
+                vs **{alert['competitor']}**: {alert['competitor_product']} (LKR {alert['competitor_price']:,.0f})
+                """)
+            
+            with col2:
+                st.error(f"**{alert['savings_percent']:.1f}% cheaper**  \n💰 Save LKR {alert['savings_amount']:,.0f}")
+            
+            st.divider()
 else:
-    st.markdown('<div class="alert-box alert-success">✅ Great! You have competitive pricing across the board!</div>', 
+    st.markdown('<div class="alert-box alert-success">✅ Your pricing is competitive! No exact matches found where competitors are significantly cheaper.</div>', 
                 unsafe_allow_html=True)
 
 # Visualizations
 st.markdown("---")
 st.header("📈 Price Analysis")
 
-tab1, tab2, tab3, tab4 = st.tabs(["📊 By Category", "🏪 Your vs Competitors", "💰 Cheapest Deals", "🔍 Price Comparison"])
+tab1, tab2, tab3, tab4 = st.tabs(["🏪 Your vs Competitors", "📊 By Category", "🔍 Product Finder", "📝 Raw Data"])
+
+with tab4:
+    st.subheader("📝 Raw Data Inspector")
+    st.markdown("Use this to check if prices are being parsed correctly.")
+    
+    if not df.empty:
+        st.dataframe(
+            df.sort_values(by=['site', 'product']), 
+            use_container_width=True,
+            column_config={
+                "price_LKR": st.column_config.NumberColumn(
+                    "Price (LKR)",
+                    format="LKR %d"
+                )
+            }
+        )
+    else:
+        st.info("No data available.")
 
 with tab1:
-    # Average price by category
-    if not filtered_competitor_df.empty:
-        cat_avg = filtered_competitor_df.groupby('category')['price_LKR'].mean().reset_index()
-        fig = px.bar(cat_avg, x='category', y='price_LKR', 
-                     title='Average Competitor Price by Category',
-                     labels={'price_LKR': 'Price (LKR)', 'category': 'Category'})
-        fig.update_layout(xaxis_tickangle=-45)
-        st.plotly_chart(fig, use_container_width=True)
-    else:
-        st.info("No competitor data to display")
-
-with tab2:
-    # Your prices vs competitors
-    st.subheader("Your Shop vs Market")
+    st.subheader("Price Comparison: Same Model & Storage")
     
     if not your_products_df.empty and not competitor_products_df.empty:
         comparison_data = []
@@ -369,108 +369,136 @@ with tab2:
             my_model = extract_model_number(your_prod['product'])
             my_storage = extract_storage(your_prod['product'])
             
-            min_comp_price = None
-            min_comp_site = None
+            if not my_model:
+                continue
+            
+            # Find cheapest exact match
+            min_price = None
+            min_site = None
             
             for _, comp in competitor_products_df.iterrows():
                 comp_model = extract_model_number(comp['product'])
                 comp_storage = extract_storage(comp['product'])
                 
-                # Only compare matching models and storage
                 if not models_match(my_model, comp_model):
                     continue
                 
-                if my_storage and comp_storage and my_storage != comp_storage:
+                # Storage must match
+                if my_storage and comp_storage:
+                    if normalize_storage(my_storage) != normalize_storage(comp_storage):
+                        continue
+                elif my_storage or comp_storage:
                     continue
                 
-                if comp['price_LKR'] == 0:
-                    continue
-                
-                if min_comp_price is None or comp['price_LKR'] < min_comp_price:
-                    min_comp_price = comp['price_LKR']
-                    min_comp_site = comp['site']
+                if min_price is None or comp['price_LKR'] < min_price:
+                    min_price = comp['price_LKR']
+                    min_site = comp['site']
             
-            if min_comp_price:
+            if min_price:
+                product_label = f"{my_model.upper()}"
+                if my_storage:
+                    product_label += f" {my_storage}"
+                
                 comparison_data.append({
-                    'Product': your_prod['product'][:40] + '...' if len(your_prod['product']) > 40 else your_prod['product'],
+                    'Product': product_label,
                     'Your Price': your_prod['price_LKR'],
-                    'Cheapest Competitor': min_comp_price,
-                    'Competitor': min_comp_site
+                    'Best Competitor': min_price,
+                    'Site': min_site,
+                    'Difference': your_prod['price_LKR'] - min_price
                 })
         
         if comparison_data:
             comp_df = pd.DataFrame(comparison_data)
             
+            # Chart
             fig = go.Figure()
             fig.add_trace(go.Bar(
                 name='Your Price',
                 x=comp_df['Product'],
                 y=comp_df['Your Price'],
-                marker_color='#1f77b4'
+                marker_color='#2196F3',
+                text=comp_df['Your Price'].apply(lambda x: f'LKR {x:,.0f}'),
+                textposition='outside'
             ))
             fig.add_trace(go.Bar(
-                name='Cheapest Competitor',
+                name='Best Competitor',
                 x=comp_df['Product'],
-                y=comp_df['Cheapest Competitor'],
-                marker_color='#ff7f0e'
+                y=comp_df['Best Competitor'],
+                marker_color='#FF9800',
+                text=comp_df['Best Competitor'].apply(lambda x: f'LKR {x:,.0f}'),
+                textposition='outside'
             ))
             
             fig.update_layout(
-                title='Your Prices vs Cheapest Competitor Prices (Same Model & Storage)',
-                xaxis_title='Product',
+                title='Your Prices vs Best Competitor (Exact Matches Only)',
+                xaxis_title='Product (Model + Storage)',
                 yaxis_title='Price (LKR)',
                 barmode='group',
                 height=500,
-                xaxis_tickangle=-45
+                showlegend=True
             )
             
             st.plotly_chart(fig, use_container_width=True)
             
-            # Show table
-            st.dataframe(comp_df, hide_index=True, use_container_width=True)
+            # Table
+            st.dataframe(
+                comp_df.style.apply(
+                    lambda x: ['background-color: #ffebee' if v > 0 else 'background-color: #e8f5e9' for v in x], 
+                    subset=['Difference']
+                ),
+                hide_index=True,
+                use_container_width=True
+            )
         else:
-            st.info("No matching competitor products found for comparison")
+            st.info("No exact competitor matches found for your products")
     else:
-        st.warning("Need both your products and competitor products for comparison")
+        st.warning("Need both your products and competitor data")
 
-with tab3:
-    # Cheapest products per category
-    st.subheader("🏆 Best Deals by Category")
+with tab2:
+    st.subheader("Average Prices by Category")
     
     if not filtered_competitor_df.empty:
-        for category in filtered_competitor_df['category'].unique()[:5]:
-            cat_data = filtered_competitor_df[filtered_competitor_df['category'] == category].nsmallest(5, 'price_LKR')
-            if not cat_data.empty:
-                st.markdown(f"**{category}**")
-                st.dataframe(
-                    cat_data[['site', 'product', 'price_LKR']].rename(
-                        columns={'price_LKR': 'Price (LKR)'}
-                    ),
-                    hide_index=True,
-                    use_container_width=True
-                )
+        cat_avg = filtered_competitor_df.groupby('category')['price_LKR'].agg(['mean', 'count']).reset_index()
+        cat_avg.columns = ['Category', 'Avg Price', 'Count']
+        
+        fig = px.bar(
+            cat_avg, 
+            x='Category', 
+            y='Avg Price',
+            text='Count',
+            title='Average Competitor Prices by Category',
+            labels={'Avg Price': 'Average Price (LKR)', 'Count': 'Products'}
+        )
+        fig.update_traces(texttemplate='%{text} products', textposition='outside')
+        fig.update_layout(xaxis_tickangle=-45, height=500)
+        
+        st.plotly_chart(fig, use_container_width=True)
+        
+        st.dataframe(cat_avg, hide_index=True, use_container_width=True)
     else:
         st.info("No data available")
 
-with tab4:
-    # Direct price comparison table
-    st.subheader("🔍 Find Best Deals for Specific Products")
+with tab3:
+    st.subheader("🔍 Find Competitor Prices for Your Products")
     
-    if not your_products_df.empty and not competitor_products_df.empty:
-        selected_product = st.selectbox(
-            "Select your product to compare:",
-            your_products_df['product'].tolist()
+    if not your_products_df.empty:
+        selected = st.selectbox(
+            "Select your product:",
+            your_products_df['product'].tolist(),
+            index=0
         )
         
-        if selected_product:
-            your_prod = your_products_df[your_products_df['product'] == selected_product].iloc[0]
+        if selected:
+            your_prod = your_products_df[your_products_df['product'] == selected].iloc[0]
             your_price = your_prod['price_LKR']
             
-            my_model = extract_model_number(selected_product)
-            my_storage = extract_storage(selected_product)
+            my_model = extract_model_number(selected)
+            my_storage = extract_storage(selected)
             
-            similar_products = []
+            st.info(f"**Model:** {my_model.upper() if my_model else 'Unknown'} | **Storage:** {my_storage if my_storage else 'N/A'} | **Your Price:** LKR {your_price:,.0f}")
             
+            # Find exact matches
+            matches = []
             for _, comp in competitor_products_df.iterrows():
                 comp_model = extract_model_number(comp['product'])
                 comp_storage = extract_storage(comp['product'])
@@ -478,61 +506,65 @@ with tab4:
                 if not models_match(my_model, comp_model):
                     continue
                 
-                if my_storage and comp_storage and my_storage != comp_storage:
+                if my_storage and comp_storage:
+                    if normalize_storage(my_storage) != normalize_storage(comp_storage):
+                        continue
+                elif my_storage or comp_storage:
                     continue
                 
-                if comp['price_LKR'] > 0:
-                    similar_products.append(comp)
+                matches.append({
+                    'Site': comp['site'],
+                    'Product': comp['product'],
+                    'Price (LKR)': comp['price_LKR'],
+                    'Difference (LKR)': comp['price_LKR'] - your_price,
+                    'Difference (%)': round(((comp['price_LKR'] - your_price) / your_price) * 100, 1)
+                })
             
-            if similar_products:
-                similar_df = pd.DataFrame(similar_products)
+            if matches:
+                match_df = pd.DataFrame(matches).sort_values('Price (LKR)')
                 
-                st.markdown(f"**Your Price:** LKR {your_price:,.0f}")
-                st.markdown(f"**Model:** {my_model if my_model else 'N/A'} | **Storage:** {my_storage if my_storage else 'N/A'}")
-                st.markdown("**Similar Products from Competitors:**")
-                
-                comparison_table = similar_df[['site', 'product', 'price_LKR']].copy()
-                comparison_table['Price Difference'] = comparison_table['price_LKR'] - your_price
-                comparison_table['% Difference'] = ((comparison_table['price_LKR'] - your_price) / your_price * 100).round(1)
-                
-                comparison_table = comparison_table.sort_values('price_LKR')
-                comparison_table.columns = ['Site', 'Product', 'Price (LKR)', 'Diff (LKR)', 'Diff (%)']
-                
-                st.dataframe(
-                    comparison_table,
-                    hide_index=True,
-                    use_container_width=True
-                )
+                st.success(f"Found {len(matches)} exact matches!")
+                st.dataframe(match_df, hide_index=True, use_container_width=True)
             else:
-                st.info(f"No similar products found for {my_model} {my_storage}")
-    else:
-        st.warning("Need product data to compare")
+                st.warning("No exact competitor matches found for this product")
 
-# Full data table
+# All Products Table
 st.markdown("---")
-st.header("📋 All Competitor Products")
+st.header("📋 All Products")
 
-if not filtered_competitor_df.empty:
-    st.dataframe(
-        filtered_competitor_df[['site', 'category', 'product', 'price_LKR']].sort_values('price_LKR'),
-        hide_index=True,
-        use_container_width=True
-    )
-    
-    # Download button
-    csv = filtered_competitor_df.to_csv(index=False)
-    st.download_button(
-        label="⬇️ Download Data as CSV",
-        data=csv,
-        file_name=f"competitor_prices_{datetime.now().strftime('%Y%m%d')}.csv",
-        mime="text/csv"
-    )
-else:
-    st.info("No data to display")
+col1, col2 = st.columns(2)
+
+with col1:
+    st.subheader("Your Products")
+    if not your_products_df.empty:
+        st.dataframe(
+            your_products_df[['product', 'price_LKR']].rename(columns={'price_LKR': 'Price (LKR)'}),
+            hide_index=True,
+            use_container_width=True
+        )
+    else:
+        st.info("No products from your shop")
+
+with col2:
+    st.subheader("Competitor Products")
+    if not filtered_competitor_df.empty:
+        display_df = filtered_competitor_df[['site', 'product', 'price_LKR']].sort_values('price_LKR')
+        display_df.columns = ['Site', 'Product', 'Price (LKR)']
+        
+        st.dataframe(display_df, hide_index=True, use_container_width=True, height=400)
+        
+        # Download
+        csv = filtered_competitor_df.to_csv(index=False)
+        st.download_button(
+            "⬇️ Download CSV",
+            csv,
+            f"competitors_{datetime.now().strftime('%Y%m%d')}.csv",
+            "text/csv"
+        )
+    else:
+        st.info("No competitor data")
 
 # Footer
 st.markdown("---")
 if 'scraped_at' in df.columns and not df.empty:
-    st.caption(f"Last updated: {df['scraped_at'].iloc[0]}")
-else:
-    st.caption("Data timestamp not available")
+    st.caption(f"📅 Last updated: {df['scraped_at'].iloc[0]}")

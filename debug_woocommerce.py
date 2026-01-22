@@ -12,8 +12,13 @@ response = requests.get(url, headers=headers, timeout=20)
 soup = BeautifulSoup(response.content, 'html.parser')
 
 # Find products
-products = soup.select('div.product')
-print(f"Found {len(products)} product divs\n")
+# Find products - using Improved selectors
+products = soup.select('div.product:not(.product-category)')
+if not products:
+    print("Trying alternative selector...")
+    products = soup.select('li.product:not(.product-category)')
+
+print(f"Found {len(products)} product divs (excluding categories)\n")
 
 # Examine first product structure
 if products:
@@ -40,16 +45,20 @@ if products:
     for sel in selectors_to_try:
         elem = first_product.select_one(sel)
         if elem:
-            print(f"✓ {sel}: {elem.get_text(strip=True)[:50]}")
+            try:
+                print(f"[OK] {sel}: {elem.get_text(strip=True)[:50]}")
+            except:
+                print(f"[OK] {sel}: (Found but encoding error printing)")
         else:
-            print(f"✗ {sel}: Not found")
+            print(f"[NO] {sel}: Not found")
     
     print("\n" + "=" * 60)
     print("PRICE ELEMENTS:")
     print("=" * 60)
     
     price_selectors = [
-        'span.woocommerce-Price-amount',
+        'span.woocommerce-Price-amount.amount bdi',
+        'span.woocommerce-Price-amount.amount',
         'span.amount',
         '.price',
         'bdi',
@@ -59,6 +68,10 @@ if products:
     for sel in price_selectors:
         elems = first_product.select(sel)
         if elems:
-            print(f"✓ {sel}: {[e.get_text(strip=True) for e in elems]}")
+            try:
+                texts = [e.get_text(strip=True) for e in elems]
+                print(f"[OK] {sel}: {texts}")
+            except:
+                print(f"[OK] {sel}: (Found but encoding error printing)")
         else:
-            print(f"✗ {sel}: Not found")
+            print(f"[NO] {sel}: Not found")

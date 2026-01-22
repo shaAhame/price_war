@@ -3,6 +3,7 @@
 import requests
 from bs4 import BeautifulSoup
 import time
+from scraper.utils import parse_price
 
 def scrape_woocommerce_site(url, category, site_name):
     """
@@ -36,13 +37,13 @@ def scrape_woocommerce_site(url, category, site_name):
             soup = BeautifulSoup(response.content, 'html.parser')
             
             # Multiple selector patterns
+            # Exclude 'product-category' which are just links to subcategories
             selectors = [
-                'li.product',
-                'div.product',
+                'li.product:not(.product-category)',
+                'div.product:not(.product-category)',
                 'li.product-type-simple',
                 'div.product-small',
-                '.products li',
-                'ul.products li',
+                '.products li:not(.product-category)',
             ]
             
             product_elements = []
@@ -77,6 +78,7 @@ def scrape_woocommerce_site(url, category, site_name):
                     
                     # Find price
                     price_selectors = [
+                        'span.woocommerce-Price-amount.amount bdi', # Specific for new WC
                         'span.woocommerce-Price-amount.amount',
                         'ins span.amount',
                         'span.price span.amount',
@@ -87,23 +89,24 @@ def scrape_woocommerce_site(url, category, site_name):
                     
                     price_elem = None
                     for sel in price_selectors:
-                        price_elem = product.select_one(sel)
-                        if price_elem:
+                        # Get the LAST matching element if there are multiple (often sale price is last)
+                        elems = product.select(sel)
+                        if elems:
+                            price_elem = elems[-1]
                             break
                     
                     if name_elem and price_elem:
                         name = name_elem.get_text(strip=True)
                         price_text = price_elem.get_text(strip=True)
                         
-                        # Extract digits
-                        price = "".join(c for c in price_text if c.isdigit())
+                        price = parse_price(price_text)
                         
-                        if price and name and len(price) >= 4:
+                        if price and name and price > 100: # Filter out weird low prices
                             products.append({
                                 "site": site_name,
                                 "category": category,
                                 "product": name,
-                                "price_LKR": int(price),
+                                "price_LKR": price,
                                 "is_own_shop": False
                             })
                             page_found += 1

@@ -4,7 +4,6 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 import time
-import re
 from scraper.utils import parse_price
 
 
@@ -43,7 +42,7 @@ def scrape_luxuryx(url, category):
                             name = elem.text.strip()
                             if name and len(name) > 3:
                                 break
-                        except:
+                        except Exception:
                             pass
 
                     # Try multiple ways to find price
@@ -61,7 +60,7 @@ def scrape_luxuryx(url, category):
                                 price = parse_price(elems[-1].text)
                                 if price:
                                     break
-                        except:
+                        except Exception:
                             pass
 
                     if price and name and len(name) > 3 and 10000 <= price <= 10000000:
@@ -74,7 +73,7 @@ def scrape_luxuryx(url, category):
                                 "is_own_shop": False,
                             }
                         )
-                except Exception as e:
+                except Exception:
                     continue
 
         # Fallback: Text-based parsing if DOM extraction failed

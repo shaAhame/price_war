@@ -3,8 +3,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 import time
 import re
 from scraper.utils import parse_price
@@ -36,7 +34,7 @@ def scrape_idealz(url="https://idealzpricelist.netlify.app/"):
             iphone_button = driver.find_element(By.XPATH, "//button[contains(text(), 'iPhone')]")
             iphone_button.click()
             time.sleep(3)
-        except:
+        except Exception as e:
             print("  Could not click iPhone button, trying alternative...")
         
         # Get all text content from the page
@@ -107,7 +105,7 @@ def scrape_idealz(url="https://idealzpricelist.netlify.app/"):
                             "is_own_shop": True
                         })
                         
-                except Exception as e:
+                except Exception:
                     continue
         
         # Alternative approach: Try to find product elements by class or structure
@@ -140,7 +138,7 @@ def scrape_idealz(url="https://idealzpricelist.netlify.app/"):
                                     "cash_price_LKR": cash_price,
                                     "is_own_shop": True
                                 })
-                except:
+                except Exception:
                     continue
         
         # Remove duplicates

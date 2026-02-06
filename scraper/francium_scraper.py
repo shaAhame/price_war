@@ -46,7 +46,7 @@ def scrape_francium(url, category):
                         f"    Found {len(product_cards)} products using selector: {selector}"
                     )
                     break
-            except:
+            except Exception:
                 continue
 
         for card in product_cards:
@@ -66,7 +66,7 @@ def scrape_francium(url, category):
                         name = elem.text.strip()
                         if name and len(name) > 3:
                             break
-                    except:
+                    except Exception:
                         continue
 
                 # Try multiple selectors for price
@@ -88,7 +88,7 @@ def scrape_francium(url, category):
                             price = parse_price(price_text)
                             if price:
                                 break
-                    except:
+                    except Exception:
                         continue
 
                 if price and name and len(name) > 3:

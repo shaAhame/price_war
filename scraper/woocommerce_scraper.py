@@ -55,18 +55,16 @@ def scrape_woocommerce_site(url, category, site_name):
             ]
 
             product_elements = []
-            used_selector = None
             for selector in selectors:
                 product_elements = soup.select(selector)
                 if product_elements:
-                    used_selector = selector
                     print(
                         f"    Using selector: {selector} (found {len(product_elements)})"
                     )
                     break
 
             if not product_elements:
-                print(f"    No products found with any selector")
+                print("    No products found with any selector")
                 break
 
             page_found = 0

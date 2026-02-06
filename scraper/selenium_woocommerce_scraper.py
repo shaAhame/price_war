@@ -71,7 +71,7 @@ def scrape_with_selenium(url, category, site_name, max_pages=3):
                                 f"    Found {len(product_elements)} products with: {selector}"
                             )
                             break
-                    except:
+                    except Exception:
                         continue
 
                 if not product_elements:
@@ -101,7 +101,7 @@ def scrape_with_selenium(url, category, site_name, max_pages=3):
                                 name = name_elem.text.strip()
                                 if name and len(name) > 3:
                                     break
-                            except:
+                            except Exception:
                                 pass
 
                         # Extract price
@@ -125,7 +125,7 @@ def scrape_with_selenium(url, category, site_name, max_pages=3):
                                     price = parse_price(price_text)
                                     if price and price > 100:
                                         break
-                            except:
+                            except Exception:
                                 pass
 
                         if name and price and price > 100:

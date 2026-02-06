@@ -37,7 +37,7 @@ def main():
             os.makedirs("data", exist_ok=True)
             with open("data/my_prices.json", "w") as f:
                 json.dump(my_prices, f, indent=2)
-            print(f"  ✓ Saved your prices to data/my_prices.json")
+            print("  ✓ Saved your prices to data/my_prices.json")
     except Exception as e:
         print(f"  ✗ Failed to scrape IdealZ: {e}")
 

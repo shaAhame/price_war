@@ -1,298 +1,282 @@
 site,category,product,price_LKR,cash_price_LKR,is_own_shop,scraped_at
-IdealZ (Your Shop),IdealZ iPhone,iPhone 17 256GB,303900,303900.0,True,2026-03-11 10:28:43
-IdealZ (Your Shop),IdealZ iPhone,iPhone 15 128GB,206000,206000.0,True,2026-03-11 10:28:43
-IdealZ (Your Shop),IdealZ iPhone,iPhone 16 (pink) 128GB,236900,236900.0,True,2026-03-11 10:28:43
-IdealZ (Your Shop),IdealZ iPhone,iPhone 16 256GB,257500,257500.0,True,2026-03-11 10:28:43
-IdealZ (Your Shop),IdealZ iPhone,iPhone 16 Pro Max 256GB,401700,401700.0,True,2026-03-11 10:28:43
-LuxuryX,LuxuryX Android/Samsung,Google Pixel 7,99000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Android/Samsung,Google Pixel 7 Pro,117000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Android/Samsung,Google Pixel 8,135000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Android/Samsung,Google Pixel 8 Pro,152000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Android/Samsung,Google Pixel 9,186500,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Android/Samsung,Google Pixel 9 Pro Fold,355000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Android/Samsung,Google Pixel 9 Pro XL,261900,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Android/Samsung,Samsung Galaxy S23 Ultra,230000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Android/Samsung,Samsung Galaxy S24 Ultra,265000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Android/Samsung,Samsung Galaxy S25 Ultra,306000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Android/Samsung,Samsung Galaxy Tab A9,44900,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Android/Samsung,Samsung Galaxy Tab A9 Plus,49500,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Android/Samsung,Samsung Galaxy S24 FE,113500,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Android/Samsung,Samsung Galaxy S24,142000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Android/Samsung,Samsung Galaxy S25,220000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Android/Samsung,Google Pixel 10 Pro XL,305000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Android/Samsung,Google Pixel 10,221000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Android/Samsung,Google Pixel 10 Pro Fold,575000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Android/Samsung,Samsung Galaxy S26 Ultra,375000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Apple iPhone,iPhone 16,245000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Apple iPhone,iPhone 15,212000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Apple iPhone,iPhone 14,175000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Apple iPhone,iPhone 13,160000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Apple iPhone,iPhone 17,295000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Apple iPhone,iPhone 17 Pro,415000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Apple iPhone,iPhone 17 Pro Max,440000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Apple iPhone,iPhone Air,331000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Apple iPad,iPad mini 7,158000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Apple iPad,iPad Pro 11 inch M2 Chip,284000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Apple iPad,iPad Air M3 13-inch (2025),258000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Apple iPad,iPad 11,122000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Apple iPad,iPad Air M3 11-inch (2025),191000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Apple iPad,iPad Pro 11 inch M5 Chip (2025),325000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX Apple iPad,iPad Pro 13 inch M5 Chip (2025),455000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX MacBook,MacBook Air 13 inch M2 Chip,255000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX MacBook,MacBook Pro 14 inch M4 Chip,495000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX MacBook,MacBook Pro 14 inch M4 Pro Chip,640000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX MacBook,MacBook Pro 14 inch M4 Max,926000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX MacBook,MacBook Pro 16 inch M3 Max,769000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX MacBook,MacBook Pro 16 inch (M4 Pro),710000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX MacBook,MacBook Pro 16 inch (M4 Max),1115000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX MacBook,iMac M4,523000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX MacBook,Mac Mini M4,190000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX MacBook,Mac Mini M4 Pro,384000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX MacBook,Apple Mac Studio M2 Max,754000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX MacBook,MacBook Air 13 inch M4 Chip,305000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX MacBook,MacBook Air M4 Chip 15 inch,359000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX MacBook,Apple Mac Studio M4 Max,673000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX MacBook,Apple Mac Studio M3 Ultra,1283000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX MacBook,MacBook Pro 14 inch M5 Chip,519000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX MacBook,MacBook Pro 16 inch (M5 Pro),888000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX MacBook,MacBook Pro 16 inch M5 Max,1335000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX MacBook,MacBook Pro 14 inch M5 Pro Chip,734000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX MacBook,MacBook Pro 14 inch M5 Max,1190000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX MacBook,MacBook Neo,229000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX MacBook,MacBook Air 13 inch M5 Chip,389000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX MacBook,MacBook Air 15 inch M5 Chip,449000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX AirPods,Apple AirPods 4 (ANC),52800,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX AirPods,Apple Airpods Max,161000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX AirPods,Apple AirPods 4,40900,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX AirPods,Powerbeats Pro 2,87000,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX AirPods,Apple AirPods Pro 3,79500,,False,2026-03-11 10:28:43
-LuxuryX,LuxuryX AirPods,Powerbeats Fit,75000,,False,2026-03-11 10:28:43
-Francium,Francium iPhone,iPhone 16E,189900,,False,2026-03-11 10:28:43
-Francium,Francium iPhone,iPhone 16 Plus,284900,,False,2026-03-11 10:28:43
-Francium,Francium iPhone,iPhone 16,234900,,False,2026-03-11 10:28:43
-Francium,Francium iPhone,iPhone 15,209900,,False,2026-03-11 10:28:43
-Francium,Francium iPhone,iPhone 14,179900,,False,2026-03-11 10:28:43
-Francium,Francium iPad,iPad 11th Gen,129900,,False,2026-03-11 10:28:43
-Francium,Francium iPad,iPad Air M3 11-inch,199900,,False,2026-03-11 10:28:43
-Francium,Francium iPad,iPad Pro M5 13-inch Nano Texture Glass,624900,,False,2026-03-11 10:28:43
-Francium,Francium iPad,iPad 10th Gen,112900,,False,2026-03-11 10:28:43
-Francium,Francium iPad,iPad Pro M5 11-inch Standard Glass,334900,,False,2026-03-11 10:28:43
-Francium,Francium iPad,iPad Mini 7,159900,,False,2026-03-11 10:28:43
-Francium,Francium iPad,iPad Pro M5 13-inch Standard Glass,424900,,False,2026-03-11 10:28:43
-Francium,Francium iPad,iPad Air M3 13-inch,264900,,False,2026-03-11 10:28:43
-Francium,Francium iPad,iPad Air M2 11-inch,169900,,False,2026-03-11 10:28:43
-Francium,Francium iPad,iPad Air M2 13-inch,239900,,False,2026-03-11 10:28:43
-Francium,Francium iPad,iPad Pro M5 11-inch Nano Texture Glass,534900,,False,2026-03-11 10:28:43
-Francium,Francium MacBook,MacBook Air M4 13-inch,319900,,False,2026-03-11 10:28:43
-Francium,Francium MacBook,Mac mini M4,194900,,False,2026-03-11 10:28:43
-Francium,Francium MacBook,MacBook Air M4 15-inch,369900,,False,2026-03-11 10:28:43
-Francium,Francium MacBook,MacBook Air M2 13-inch,254900,,False,2026-03-11 10:28:43
-Francium,Francium MacBook,MacBook Air M3 13-inch,279900,,False,2026-03-11 10:28:43
-Francium,Francium MacBook,MacBook Pro M3 Pro 16-inch,689900,,False,2026-03-11 10:28:43
-Francium,Francium MacBook,MacBook Pro M5 14-inch,529900,,False,2026-03-11 10:28:43
-Francium,Francium MacBook,iMac M4 8-Core CPU and 8-Core GPU Standard glass,469900,,False,2026-03-11 10:28:43
-Francium,Francium MacBook,MacBook Air M3 15-inch,319900,,False,2026-03-11 10:28:43
-Francium,Francium MacBook,MacBook Pro M4 Pro 14inch,639900,,False,2026-03-11 10:28:43
-Francium,Francium MacBook,Mac Studio M4 Max 12-Core CPU 30-Core GPU,709900,,False,2026-03-11 10:28:43
-Francium,Francium AirPods,AirPods 4,40900,,False,2026-03-11 10:28:43
-Francium,Francium AirPods,AirPods 4 ANC,54900,,False,2026-03-11 10:28:43
-Francium,Francium AirPods,AirPods Max,164900,,False,2026-03-11 10:28:43
-Francium,Francium Watch,Apple Watch Series 11 Titanium Case 46mm GPS + Cellular,319900,,False,2026-03-11 10:28:43
-Francium,Francium Watch,Apple Watch Series 11 Titanium Case 42mm GPS + Cellular,314900,,False,2026-03-11 10:28:43
-Francium,Francium Watch,Apple Watch Series 11 Aluminium Case 46mm GPS + Cellular,209900,,False,2026-03-11 10:28:43
-Francium,Francium Watch,Apple Watch Series 11 Aluminium Case 42mm GPS+Cellular,189900,,False,2026-03-11 10:28:43
-Francium,Francium Watch,Apple Watch Series SE 3 44mm GPS + Cellular,139900,,False,2026-03-11 10:28:43
-Francium,Francium Watch,Apple Watch Series SE 3 44mm GPS,99900,,False,2026-03-11 10:28:43
-Francium,Francium Watch,Apple Watch Series SE 3 40mm GPS + Cellular,129900,,False,2026-03-11 10:28:43
-Francium,Francium Watch,Apple Watch Series SE 3 40mm GPS,87900,,False,2026-03-11 10:28:43
-Francium,Francium Watch,Apple Watch Series 11 Aluminium Case 46mm GPS,127900,,False,2026-03-11 10:28:43
-Francium,Francium Watch,Apple Watch Series 11 Aluminium Case 42mm GPS,117900,,False,2026-03-11 10:28:43
-Francium,Francium Watch,Apple Watch Ultra 3,264900,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution iPhone,iPhone 11 (Pre Owned),85000,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution iPhone,iPhone 11 Pro (Pre Owned),89900,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution iPhone,iPhone 11 Pro Max (Pre Owned),99900,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution iPhone,iPhone 12 (Pre-Owned),95000,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution iPhone,iPhone 12 Pro (Pre-Owned),125000,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution iPhone,iPhone 12 Pro Max (Pre-Owned),145000,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution iPhone,iPhone 13 (Pre-Owned),120000,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution iPhone,iPhone 13 Pro (Pre-Owned),145000,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution iPhone,iPhone 13 Pro Max (Pre-Owned),165000,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution iPhone,iPhone 14 (Pre-Owned),130000,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution iPhone,iPhone 14 Pro (Pre-Owned),210000,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution iPhone,iPhone 14 Pro Max (Pre-Owned),225000,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution iPhone,iPhone 15 (Pre-Owned),165000,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution iPhone,iPhone 15 Pro (Pre-Owned),225000,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution iPhone,iPhone 15 Pro Max (Pre-Owned),260000,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution iPhone,iPhone 16 (Pre Owned),205000,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution iPhone,iPhone 16 Pro (Pre Owned),290000,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution iPhone,iPhone 16 Pro Max (Pre Owned),375000,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution iPhone,iPhone 17 (Pre Owned),240000,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution iPhone,iPhone 17 Pro (Pre Owned),350000,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution iPhone,iPhone 17 Pro Max (Pre Owned),395000,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution iPhone,iPhone SE 2 (Pre Owned),54900,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution iPhone,iPhone X (Pre Owned),45000,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution Watch,Apple Watch SE 3,136900,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution Watch,Apple watch series 10 aluminum,119999,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution Watch,Apple Watch Series 11 Aluminum,133999,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution Watch,Apple Watch Series SE 2nd Gen,75999,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution Watch,Apple Watch Ultra 2,194999,,False,2026-03-11 10:28:43
-PresentSolution,PresentSolution Watch,Apple watch ultra 3,248900,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 12 128GB with Apple Care,139990,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 13 128GB with Apple Care,159990,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 13 128GB with Gnext Warranty,189990,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 14 128GB with Apple Care,184990,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 14 128GB with Gnext Warranty,190000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 15 128GB with Apple Care,222990,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 15 128GB with Gnext Warranty,229990,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 15 256GB with Apple Care,248990,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 16 128GB with Gnext Warranty,240000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 16 256GB with Gnext Warranty,305990,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 16 Plus 128GB with Apple Care Warranty,237990,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 16 Plus 256GB with Apple Care Warranty,284900,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 16 Pro 128GB with Apple Care Warranty,329000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 16 Pro 128GB with Gnext,420000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 16 Pro 256GB with Apple Care Warranty,370900,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 16 Pro Max 256GB with Apple Care Warranty,379900,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 16 Pro Max 512GB with Apple Care Warranty,429900,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 16 Pro Max 512GB with Gnext,459000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 16e 128GB with Apple Care,187990,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 256GB with Apple Care,309990,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 256GB with Gnext Warranty,340000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 512GB with Gnext Warranty,360000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Air 256GB with Apple Care,319990,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Pro 1TB with Gnext Warranty,820000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Pro 256GB with Apple Care,429990,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Pro 256GB with Gnext Warranty,449900,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Pro 512GB with Apple Care,510000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Pro 512GB with Gnext Warranty,720000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Pro Max 1TB with Apple Care,589990,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Pro Max 1TB with Gnext Warranty,880000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Pro Max 256GB with Apple Care,459990,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Pro Max 256GB with Gnext Warranty,590000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Pro Max 2TB Apple Care,700000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Pro Max 2TB with Gnext Warranty,900000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Pro Max 512GB with Apple Care,528990,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Pro Max 512GB with Gnext Warranty,770000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPad,Apple iPad 2022 10.9 10th Gen WiFi 256GB,110000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPad,Apple iPad 2025 11″ 11th Gen WiFi + Cellular 128GB,160000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPad,Apple iPad 2025 11″ 11th Gen WiFi + Cellular 256GB,225000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPad,Apple iPad 2025 11″ 11th Gen WiFi 128GB,119990,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPad,Apple iPad 2025 11″ 11th Gen WiFi 256GB,164990,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPad,Apple iPad Air 2025 11″ M3 WiFi 128GB,220000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPad,Apple iPad Air 2025 11″ M3 WiFi 256GB,205000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPad,Apple iPad Air 2025 13″ M3 WiFi + Cellular 256GB,344000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPad,Apple iPad Air 6 2024 11″ M2 WiFi + Cellular 128GB,199990,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPad,Apple iPad Air 6 2024 11″ M2 WiFi 128GB,175000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPad,Apple iPad Air 6 2024 11″ M2 WiFi 256GB,205000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPad,Apple iPad Air 6 2024 13″ M2 WiFi + Cellular 128GB,240000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPad,Apple iPad Air 6 2024 13″ M2 WiFi 128GB,145000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPad,Apple iPad Air 6 2024 13″ M2 WiFi 256GB,237000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPad,Apple iPad Air 7 2025 11″ M3 WiFi + Cellular 128GB,242000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPad,Apple iPad Air 7 2025 11″ M3 WiFi + Cellular 256GB,319990,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPad,Apple iPad Pro 2024 M4 Chip 11-inch WiFi + Cellular 256GB,430000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPad,Apple iPad Pro 2024 M4 Chip 11-inch WiFi 256GB,345000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPad,Apple iPad Pro 2024 M4 Chip 13-inch WiFi + Cellular 256GB,385000,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPad,Apple iPad Pro 2025 11″ M5 WiFi + Cellular 256GB,394990,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPad,Apple iPad Pro 2025 11″ M5 WiFi 256GB,338990,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPad,Apple iPad Pro 2025 13″ M5 WiFi + Cellular 256GB,423990,,False,2026-03-11 10:28:43
-GeniusMobile,GeniusMobile iPad,Apple Pencil (2nd Generation),27990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPhone,Apple iPhone 11 64GB,122999,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPhone,Lenovo A2800D Replacement Battery,2492,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPhone,Samsung Galaxy A73 5G 8GB RAM 256GB,161000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPhone,"Apple MGNR3 Mac Mini with M1 Chip (Late 2020, Silver)",270375,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPhone,JBL GO 2,9900,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPhone,Apple AirPods 2 with Charging Case,31500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPhone,Apple 20W USB Type-C Power Adapter,7500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Samsung,Apple iPhone 11 64GB,122999,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Samsung,Lenovo A2800D Replacement Battery,2492,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Samsung,Samsung Galaxy A73 5G 8GB RAM 256GB,161000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Samsung,"Apple MGNR3 Mac Mini with M1 Chip (Late 2020, Silver)",270375,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Samsung,JBL GO 2,9900,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Samsung,Apple AirPods 2 with Charging Case,31500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Samsung,Apple 20W USB Type-C Power Adapter,7500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Pro 2025 11″ M5 WiFi 512GB,381000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Pro 2025 11″ M5 WiFi + Cellular 256GB,353000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Pro 2025 13″ M5 WiFi 256GB,379500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Pro 2025 11″ M5 WiFi 256GB,304500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad 2025 11″ 11th Gen WiFi + Cellular 256GB,212000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Air 7 2025 11″ M3 WiFi 256GB + Cellular,289500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Air 7 2025 11″ M3 WiFi + Cellular 128GB,215500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad 2025 11″ 11th Gen WiFi + Cellular 128GB,144990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Air 2025 11″ M3 WiFi 256GB,199990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Mini 7 8.3″ 2024 WiFi 256GB,182500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Air 2025 13″ M3 WiFi 256GB,259990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Air 2025 13″ M3 WiFi 128GB,230000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Air 2025 11″ M3 WiFi 128GB,177000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad 2025 11″ 11th Gen WiFi 256GB,149990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad 2025 11″ 11th Gen WiFi 128GB,114500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Pro 2024 M4 Chip 13-inch WiFi 256GB,358000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Mini 7 8.3″ 2024 WiFi 128GB,147990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Pro 2024 M4 Chip 11-inch WiFi + Cellular 512GB,393499,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Air 13″ 2024 M2 5G 256GB,303500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Pro 2024 M4 Chip 11-inch WiFi 512GB,343500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Air 13″ 2024 M2 WiFi 256GB,245000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Air 13″ 2024 M2 5G 128GB,250500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Pro 2024 M4 Chip 13-inch WiFi + Cellular 512GB,416990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Pro 2024 M4 Chip 13-inch WiFi + Cellular 256GB,374990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Pro 2024 M4 Chip 11-inch WiFi + Cellular 256GB,349990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Air 6 2024 11″ M2 WiFi + Cellular 256GB,277000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Air 6 2024 11″ M2 WiFi + Cellular 128GB,242000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad 2022 10.9 10th Gen WiFi + Cellular 256GB,212000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Pro 2024 M4 Chip 11-inch WiFi 256GB,278000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Air 6 2024 11″ M2 WiFi 128GB,177500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Air 6 2024 13″ M2 WiFi 128GB,199990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Air 6 2024 11″ M2 WiFi 256GB,210000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Pro 2022 M2 Chip 11-inch 4th Gen WiFi 1TB,509999,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Pro 2022 M2 Chip 12.9-inch 6th Gen WiFi 256GB,390000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad 2022 10.9 10th Gen WiFi + Cellular 64GB,149000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Pro 2022 M2 Chip 12.9-inch 6th Gen WiFi + Cellular 2TB,679776,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Pro 2022 M2 Chip 12.9-inch 6th Gen WiFi + Cellular 1TB,565646,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Pro 2022 M2 Chip 12.9-inch 6th Gen WiFi + Cellular 128GB,359990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Pro 2022 M2 Chip 12.9-inch 6th Gen WiFi 128GB,349500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile iPad,Apple iPad Pro 2022 M2 Chip 12.9-inch 6th Gen WiFi + Cellular 256GB,389000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile AirPods,Apple AirPods Pro 3,72990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile AirPods,Apple AirPods Max 2024,154500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile AirPods,Apple AirPods 4 With Active Noise Cancellation,47500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile AirPods,Apple AirPods 4,36500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile AirPods,Apple AirPods Pro 2nd gen with MagSafe Charging Case (USB‑C) 2024,54990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile AirPods,Apple AirPods 2 with Charging Case,31500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Ultra 3 49MM Natural Titanium GPS + Cellular – Bright Blue Trail Loop Band,239900,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Ultra 3 49MM Natural Titanium Light Blue GPS + Cellular – Light Blue Alpine Loop Band,242000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Series 11 46MM Rose Gold Aluminum GPS – Light Blush Sport Band,119500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch SE 3 40MM Midnight Aluminum GPS – Midnight Sport Band,87000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Series 11 42MM Silver Aluminum GPS – Purple Fog Sport Band,115990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch SE 2nd Gen 40MM Silver Aluminum GPS – Denim Blue Sport Band,65500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Series 11 46MM Rose Gold Aluminum GPS – Black Sport Band,128990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Series 11 42MM Silver Aluminum GPS – Starlight Sport Band,125990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Series 11 42MM Space Gray Aluminum GPS – Black Solo Loop Band,119990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Ultra 3 49MM Titanium Black GPS + Cellular – Black/Charcoal Trail Loop Band,239990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Ultra 3 49MM Titanium Natural GPS + Cellular – Anchor Blue Ocean Band,236000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Ultra 3 49MM Titanium Black GPS + Cellular – Black Ocean Band,236000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Ultra 3 49MM Titanium Black GPS + Cellular – Black Alpine Loop Band,242000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Series 11 42MM Rose Gold Aluminum GPS – Light Blush Sport Band,116000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Series 11 42MM Jet Black Aluminum GPS – Black Sport Band,115990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Series 11 46MM Jet Black Aluminum GPS – Black Sport Band,119500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch SE 3 40MM Starlight Aluminum GPS – Starlight Sport Band,84990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch SE 3 44MM Midnight Aluminum GPS – Midnight Sport Band,91990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Series 11 46MM Space Gray Aluminum GPS – Black Sport Band,119500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Series 11 42MM Space Gray Aluminum GPS – Black Sport Band,115990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Series 11 46MM Space Gray Aluminum GPS – Anchor Blue Sport Band,128990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Series 10 42MM Rose Gold Aluminum GPS – Plum Sport Loop Band,108000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Ultra 2 49MM Titanium Black GPS + Cellular – Black Trail Loop Band,185000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch SE 2nd Gen 44MM Starlight Aluminum GPS – Green Sport Loop Band,75990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Ultra 2 49MM Natural Titanium GPS + Cellular – Tan Alpine Loop Band,229000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Series 10 42MM Jet Black Aluminum GPS – Ink Sport Loop Band,105900,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Ultra 2 49MM Black Titanium GPS + Cellular – Titanium Black Milanese Loop Band,257990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Ultra 2 49MM Natural GPS + Cellular – Blue Trail Loop Band,236500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Ultra 2 49MM Black GPS + Cellular – Dark Green Alpine Loop Band,216000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Ultra 2 49MM Black GPS + Cellular – Navy Ocean Band,242500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Ultra 2 49MM Natural GPS + Cellular – Navy Ocean Band,237000,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Ultra 2 49MM Titanium Black GPS + Cellular – Black Ocean Band,223990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Series 10 42MM Rose Gold Aluminum GPS – Light Blush Sport Band,105500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Series 10 46MM Jet Black Aluminum GPS – Black Sport Band,115990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Series 10 42MM Jet Black Aluminum GPS – Black Sport Band,105900,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Series 10 42MM Silver Aluminum GPS – Denim Sport Band,105500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Series 10 46MM Silver Aluminum GPS – Denim Sport Band,114900,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Series 9 45MM Midnight Aluminum GPS – Midnight Sport Band,99990,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Series 9 41MM Midnight Aluminum GPS – Midnight Sport Band,99500,,False,2026-03-11 10:28:43
-LifeMobile,LifeMobile Watch,Apple Watch Ultra 2 49MM Titanium GPS + Cellular – Orange Ocean Band,299989,,False,2026-03-11 10:28:43
+IdealZ (Your Shop),IdealZ iPhone,iPhone 17 256GB,303900,303900.0,True,2026-03-12 10:28:23
+IdealZ (Your Shop),IdealZ iPhone,iPhone 15 128GB,206000,206000.0,True,2026-03-12 10:28:23
+IdealZ (Your Shop),IdealZ iPhone,iPhone 16 (pink) 128GB,236900,236900.0,True,2026-03-12 10:28:23
+IdealZ (Your Shop),IdealZ iPhone,iPhone 16 256GB,257500,257500.0,True,2026-03-12 10:28:23
+IdealZ (Your Shop),IdealZ iPhone,iPhone 16 Pro Max 256GB,401700,401700.0,True,2026-03-12 10:28:23
+LuxuryX,LuxuryX Android/Samsung,Google Pixel 7,99000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Android/Samsung,Google Pixel 7 Pro,117000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Android/Samsung,Google Pixel 8,135000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Android/Samsung,Google Pixel 8 Pro,152000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Android/Samsung,Google Pixel 9,186500,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Android/Samsung,Google Pixel 9 Pro Fold,355000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Android/Samsung,Google Pixel 9 Pro XL,261900,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Android/Samsung,Samsung Galaxy S23 Ultra,230000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Android/Samsung,Samsung Galaxy S24 Ultra,265000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Android/Samsung,Samsung Galaxy S25 Ultra,306000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Android/Samsung,Samsung Galaxy Tab A9,44900,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Android/Samsung,Samsung Galaxy Tab A9 Plus,49500,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Android/Samsung,Samsung Galaxy S24 FE,113500,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Android/Samsung,Samsung Galaxy S24,142000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Android/Samsung,Samsung Galaxy S25,220000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Android/Samsung,Google Pixel 10 Pro XL,305000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Android/Samsung,Google Pixel 10,221000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Android/Samsung,Google Pixel 10 Pro Fold,575000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Android/Samsung,Samsung Galaxy S26 Ultra,375000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Apple iPhone,iPhone 16,245000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Apple iPhone,iPhone 15,212000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Apple iPhone,iPhone 14,175000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Apple iPhone,iPhone 13,160000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Apple iPhone,iPhone 17,295000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Apple iPhone,iPhone 17 Pro,415000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Apple iPhone,iPhone 17 Pro Max,440000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Apple iPhone,iPhone Air,331000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Apple iPad,iPad mini 7,158000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Apple iPad,iPad Pro 11 inch M2 Chip,284000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Apple iPad,iPad Air M3 13-inch (2025),258000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Apple iPad,iPad 11,118000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Apple iPad,iPad Air M3 11-inch (2025),191000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Apple iPad,iPad Pro 11 inch M5 Chip (2025),325000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX Apple iPad,iPad Pro 13 inch M5 Chip (2025),455000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX MacBook,MacBook Air 13 inch M2 Chip,241000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX MacBook,MacBook Pro 14 inch M4 Chip,495000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX MacBook,MacBook Pro 14 inch M4 Pro Chip,640000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX MacBook,MacBook Pro 14 inch M4 Max,926000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX MacBook,MacBook Pro 16 inch M3 Max,769000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX MacBook,MacBook Pro 16 inch (M4 Pro),710000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX MacBook,MacBook Pro 16 inch (M4 Max),1115000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX MacBook,iMac M4,523000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX MacBook,Mac Mini M4,190000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX MacBook,Mac Mini M4 Pro,384000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX MacBook,Apple Mac Studio M2 Max,754000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX MacBook,MacBook Air 13 inch M4 Chip,305000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX MacBook,MacBook Air M4 Chip 15 inch,359000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX MacBook,Apple Mac Studio M4 Max,673000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX MacBook,Apple Mac Studio M3 Ultra,1283000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX MacBook,MacBook Pro 14 inch M5 Chip,519000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX MacBook,MacBook Pro 16 inch (M5 Pro),888000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX MacBook,MacBook Pro 16 inch M5 Max,1335000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX MacBook,MacBook Pro 14 inch M5 Pro Chip,734000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX MacBook,MacBook Pro 14 inch M5 Max,1190000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX MacBook,MacBook Neo,249000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX MacBook,MacBook Air 13 inch M5 Chip,389000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX MacBook,MacBook Air 15 inch M5 Chip,449000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX AirPods,Apple AirPods 4 (ANC),52800,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX AirPods,Apple Airpods Max,161000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX AirPods,Apple AirPods 4,40900,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX AirPods,Powerbeats Pro 2,87000,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX AirPods,Apple AirPods Pro 3,79500,,False,2026-03-12 10:28:23
+LuxuryX,LuxuryX AirPods,Powerbeats Fit,75000,,False,2026-03-12 10:28:23
+Francium,Francium iPad,iPad 11th Gen,129900,,False,2026-03-12 10:28:23
+Francium,Francium iPad,iPad Air M3 11-inch,199900,,False,2026-03-12 10:28:23
+Francium,Francium iPad,iPad Pro M5 13-inch Nano Texture Glass,624900,,False,2026-03-12 10:28:23
+Francium,Francium iPad,iPad 10th Gen,112900,,False,2026-03-12 10:28:23
+Francium,Francium iPad,iPad Pro M5 11-inch Standard Glass,334900,,False,2026-03-12 10:28:23
+Francium,Francium iPad,iPad Mini 7,159900,,False,2026-03-12 10:28:23
+Francium,Francium iPad,iPad Pro M5 13-inch Standard Glass,424900,,False,2026-03-12 10:28:23
+Francium,Francium iPad,iPad Air M3 13-inch,264900,,False,2026-03-12 10:28:23
+Francium,Francium iPad,iPad Air M2 11-inch,169900,,False,2026-03-12 10:28:23
+Francium,Francium iPad,iPad Air M2 13-inch,239900,,False,2026-03-12 10:28:23
+Francium,Francium iPad,iPad Pro M5 11-inch Nano Texture Glass,534900,,False,2026-03-12 10:28:23
+Francium,Francium MacBook,MacBook Air M4 13-inch,319900,,False,2026-03-12 10:28:23
+Francium,Francium MacBook,Mac mini M4,204900,,False,2026-03-12 10:28:23
+Francium,Francium MacBook,MacBook Air M4 15-inch,369900,,False,2026-03-12 10:28:23
+Francium,Francium MacBook,MacBook Air M2 13-inch,254900,,False,2026-03-12 10:28:23
+Francium,Francium MacBook,MacBook Air M3 13-inch,279900,,False,2026-03-12 10:28:23
+Francium,Francium MacBook,MacBook Pro M3 Pro 16-inch,689900,,False,2026-03-12 10:28:23
+Francium,Francium MacBook,MacBook Pro M5 14-inch,529900,,False,2026-03-12 10:28:23
+Francium,Francium MacBook,iMac M4 8-Core CPU and 8-Core GPU Standard glass,469900,,False,2026-03-12 10:28:23
+Francium,Francium MacBook,MacBook Air M3 15-inch,319900,,False,2026-03-12 10:28:23
+Francium,Francium MacBook,MacBook Pro M4 Pro 14inch,639900,,False,2026-03-12 10:28:23
+Francium,Francium MacBook,Mac Studio M4 Max 12-Core CPU 30-Core GPU,709900,,False,2026-03-12 10:28:23
+Francium,Francium AirPods,AirPods 4,40900,,False,2026-03-12 10:28:23
+Francium,Francium AirPods,AirPods 4 ANC,54900,,False,2026-03-12 10:28:23
+Francium,Francium AirPods,AirPods Max,164900,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution iPhone,iPhone 11 (Pre Owned),85000,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution iPhone,iPhone 11 Pro (Pre Owned),89900,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution iPhone,iPhone 11 Pro Max (Pre Owned),99900,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution iPhone,iPhone 12 (Pre-Owned),95000,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution iPhone,iPhone 12 Pro (Pre-Owned),125000,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution iPhone,iPhone 12 Pro Max (Pre-Owned),145000,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution iPhone,iPhone 13 (Pre-Owned),120000,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution iPhone,iPhone 13 Pro (Pre-Owned),145000,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution iPhone,iPhone 13 Pro Max (Pre-Owned),165000,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution iPhone,iPhone 14 (Pre-Owned),130000,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution iPhone,iPhone 14 Pro (Pre-Owned),210000,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution iPhone,iPhone 14 Pro Max (Pre-Owned),225000,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution iPhone,iPhone 15 (Pre-Owned),165000,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution iPhone,iPhone 15 Pro (Pre-Owned),225000,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution iPhone,iPhone 15 Pro Max (Pre-Owned),260000,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution iPhone,iPhone 16 (Pre Owned),205000,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution iPhone,iPhone 16 Pro (Pre Owned),290000,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution iPhone,iPhone 16 Pro Max (Pre Owned),375000,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution iPhone,iPhone 17 (Pre Owned),240000,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution iPhone,iPhone 17 Pro (Pre Owned),350000,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution iPhone,iPhone 17 Pro Max (Pre Owned),395000,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution iPhone,iPhone SE 2 (Pre Owned),54900,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution iPhone,iPhone X (Pre Owned),45000,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution Watch,Apple Watch SE 3,136900,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution Watch,Apple watch series 10 aluminum,119999,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution Watch,Apple Watch Series 11 Aluminum,133999,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution Watch,Apple Watch Series SE 2nd Gen,75999,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution Watch,Apple Watch Ultra 2,194999,,False,2026-03-12 10:28:23
+PresentSolution,PresentSolution Watch,Apple watch ultra 3,248900,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 12 128GB with Apple Care,139990,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 13 128GB with Apple Care,159990,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 13 128GB with Gnext Warranty,189990,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 14 128GB with Apple Care,184990,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 14 128GB with Gnext Warranty,190000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 15 128GB with Apple Care,222990,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 15 128GB with Gnext Warranty,229990,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 15 256GB with Apple Care,248990,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 16 128GB with Gnext Warranty,240000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 16 256GB with Gnext Warranty,305990,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 16 Plus 128GB with Apple Care Warranty,237990,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 16 Plus 256GB with Apple Care Warranty,284900,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 16 Pro 128GB with Apple Care Warranty,329000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 16 Pro 128GB with Gnext,420000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 16 Pro 256GB with Apple Care Warranty,370900,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 16 Pro Max 256GB with Apple Care Warranty,379900,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 16 Pro Max 512GB with Apple Care Warranty,429900,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 16 Pro Max 512GB with Gnext,459000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 16e 128GB with Apple Care,187990,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 256GB with Apple Care,309990,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 256GB with Gnext Warranty,340000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 512GB with Gnext Warranty,360000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Air 256GB with Apple Care,319990,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Pro 1TB with Gnext Warranty,820000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Pro 256GB with Apple Care,429990,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Pro 256GB with Gnext Warranty,449900,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Pro 512GB with Apple Care,510000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Pro 512GB with Gnext Warranty,720000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Pro Max 1TB with Apple Care,589990,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Pro Max 1TB with Gnext Warranty,880000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Pro Max 256GB with Apple Care,459990,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Pro Max 256GB with Gnext Warranty,590000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Pro Max 2TB Apple Care,700000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Pro Max 2TB with Gnext Warranty,900000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Pro Max 512GB with Apple Care,528990,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPhone,Apple iPhone 17 Pro Max 512GB with Gnext Warranty,770000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPad,Apple iPad 2022 10.9 10th Gen WiFi 256GB,110000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPad,Apple iPad 2025 11″ 11th Gen WiFi + Cellular 128GB,160000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPad,Apple iPad 2025 11″ 11th Gen WiFi + Cellular 256GB,225000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPad,Apple iPad 2025 11″ 11th Gen WiFi 128GB,119990,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPad,Apple iPad 2025 11″ 11th Gen WiFi 256GB,164990,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPad,Apple iPad Air 2025 11″ M3 WiFi 128GB,220000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPad,Apple iPad Air 2025 11″ M3 WiFi 256GB,205000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPad,Apple iPad Air 2025 13″ M3 WiFi + Cellular 256GB,344000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPad,Apple iPad Air 6 2024 11″ M2 WiFi + Cellular 128GB,199990,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPad,Apple iPad Air 6 2024 11″ M2 WiFi 128GB,175000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPad,Apple iPad Air 6 2024 11″ M2 WiFi 256GB,205000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPad,Apple iPad Air 6 2024 13″ M2 WiFi + Cellular 128GB,240000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPad,Apple iPad Air 6 2024 13″ M2 WiFi 128GB,145000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPad,Apple iPad Air 6 2024 13″ M2 WiFi 256GB,237000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPad,Apple iPad Air 7 2025 11″ M3 WiFi + Cellular 128GB,242000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPad,Apple iPad Air 7 2025 11″ M3 WiFi + Cellular 256GB,319990,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPad,Apple iPad Pro 2024 M4 Chip 11-inch WiFi + Cellular 256GB,430000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPad,Apple iPad Pro 2024 M4 Chip 11-inch WiFi 256GB,345000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPad,Apple iPad Pro 2024 M4 Chip 13-inch WiFi + Cellular 256GB,385000,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPad,Apple iPad Pro 2025 11″ M5 WiFi + Cellular 256GB,394990,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPad,Apple iPad Pro 2025 11″ M5 WiFi 256GB,338990,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPad,Apple iPad Pro 2025 13″ M5 WiFi + Cellular 256GB,423990,,False,2026-03-12 10:28:23
+GeniusMobile,GeniusMobile iPad,Apple Pencil (2nd Generation),27990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPhone,Apple iPhone 11 64GB,122999,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPhone,Lenovo A2800D Replacement Battery,2492,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPhone,Samsung Galaxy A73 5G 8GB RAM 256GB,161000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPhone,"Apple MGNR3 Mac Mini with M1 Chip (Late 2020, Silver)",270375,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPhone,JBL GO 2,9900,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPhone,Apple AirPods 2 with Charging Case,31500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPhone,Apple 20W USB Type-C Power Adapter,7500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Samsung,Apple iPhone 11 64GB,122999,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Samsung,Lenovo A2800D Replacement Battery,2492,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Samsung,Samsung Galaxy A73 5G 8GB RAM 256GB,161000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Samsung,"Apple MGNR3 Mac Mini with M1 Chip (Late 2020, Silver)",270375,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Samsung,JBL GO 2,9900,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Samsung,Apple AirPods 2 with Charging Case,31500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Samsung,Apple 20W USB Type-C Power Adapter,7500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Pro 2025 11″ M5 WiFi 512GB,381000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Pro 2025 11″ M5 WiFi + Cellular 256GB,353000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Pro 2025 13″ M5 WiFi 256GB,379500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Pro 2025 11″ M5 WiFi 256GB,304500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad 2025 11″ 11th Gen WiFi + Cellular 256GB,212000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Air 7 2025 11″ M3 WiFi 256GB + Cellular,289500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Air 7 2025 11″ M3 WiFi + Cellular 128GB,215500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad 2025 11″ 11th Gen WiFi + Cellular 128GB,144990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Air 2025 11″ M3 WiFi 256GB,199990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Mini 7 8.3″ 2024 WiFi 256GB,182500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Air 2025 13″ M3 WiFi 256GB,259990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Air 2025 13″ M3 WiFi 128GB,230000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Air 2025 11″ M3 WiFi 128GB,177000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad 2025 11″ 11th Gen WiFi 256GB,149990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad 2025 11″ 11th Gen WiFi 128GB,114500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Pro 2024 M4 Chip 13-inch WiFi 256GB,358000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Mini 7 8.3″ 2024 WiFi 128GB,147990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Pro 2024 M4 Chip 11-inch WiFi + Cellular 512GB,393499,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Air 13″ 2024 M2 5G 256GB,303500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Pro 2024 M4 Chip 11-inch WiFi 512GB,343500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Air 13″ 2024 M2 WiFi 256GB,245000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Air 13″ 2024 M2 5G 128GB,250500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Pro 2024 M4 Chip 13-inch WiFi + Cellular 512GB,416990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Pro 2024 M4 Chip 13-inch WiFi + Cellular 256GB,374990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Pro 2024 M4 Chip 11-inch WiFi + Cellular 256GB,349990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Air 6 2024 11″ M2 WiFi + Cellular 256GB,277000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Air 6 2024 11″ M2 WiFi + Cellular 128GB,242000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad 2022 10.9 10th Gen WiFi + Cellular 256GB,212000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Pro 2024 M4 Chip 11-inch WiFi 256GB,278000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Air 6 2024 11″ M2 WiFi 128GB,177500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Air 6 2024 13″ M2 WiFi 128GB,199990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Air 6 2024 11″ M2 WiFi 256GB,210000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Pro 2022 M2 Chip 11-inch 4th Gen WiFi 1TB,509999,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Pro 2022 M2 Chip 12.9-inch 6th Gen WiFi 256GB,390000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad 2022 10.9 10th Gen WiFi + Cellular 64GB,149000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Pro 2022 M2 Chip 12.9-inch 6th Gen WiFi + Cellular 2TB,679776,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Pro 2022 M2 Chip 12.9-inch 6th Gen WiFi + Cellular 1TB,565646,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Pro 2022 M2 Chip 12.9-inch 6th Gen WiFi + Cellular 128GB,359990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Pro 2022 M2 Chip 12.9-inch 6th Gen WiFi 128GB,349500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile iPad,Apple iPad Pro 2022 M2 Chip 12.9-inch 6th Gen WiFi + Cellular 256GB,389000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile AirPods,Apple AirPods Pro 3,72990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile AirPods,Apple AirPods Max 2024,154500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile AirPods,Apple AirPods 4 With Active Noise Cancellation,47500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile AirPods,Apple AirPods 4,36500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile AirPods,Apple AirPods Pro 2nd gen with MagSafe Charging Case (USB‑C) 2024,54990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile AirPods,Apple AirPods 2 with Charging Case,31500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Ultra 3 49MM Natural Titanium GPS + Cellular – Bright Blue Trail Loop Band,239900,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Ultra 3 49MM Natural Titanium Light Blue GPS + Cellular – Light Blue Alpine Loop Band,242000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Series 11 46MM Rose Gold Aluminum GPS – Light Blush Sport Band,119500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch SE 3 40MM Midnight Aluminum GPS – Midnight Sport Band,87000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Series 11 42MM Silver Aluminum GPS – Purple Fog Sport Band,115990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch SE 2nd Gen 40MM Silver Aluminum GPS – Denim Blue Sport Band,65500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Series 11 46MM Rose Gold Aluminum GPS – Black Sport Band,128990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Series 11 42MM Silver Aluminum GPS – Starlight Sport Band,125990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Series 11 42MM Space Gray Aluminum GPS – Black Solo Loop Band,119990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Ultra 3 49MM Titanium Black GPS + Cellular – Black/Charcoal Trail Loop Band,239990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Ultra 3 49MM Titanium Natural GPS + Cellular – Anchor Blue Ocean Band,236000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Ultra 3 49MM Titanium Black GPS + Cellular – Black Ocean Band,236000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Ultra 3 49MM Titanium Black GPS + Cellular – Black Alpine Loop Band,242000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Series 11 42MM Rose Gold Aluminum GPS – Light Blush Sport Band,116000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Series 11 42MM Jet Black Aluminum GPS – Black Sport Band,115990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Series 11 46MM Jet Black Aluminum GPS – Black Sport Band,119500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch SE 3 40MM Starlight Aluminum GPS – Starlight Sport Band,84990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch SE 3 44MM Midnight Aluminum GPS – Midnight Sport Band,91990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Series 11 46MM Space Gray Aluminum GPS – Black Sport Band,119500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Series 11 42MM Space Gray Aluminum GPS – Black Sport Band,115990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Series 11 46MM Space Gray Aluminum GPS – Anchor Blue Sport Band,128990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Series 10 42MM Rose Gold Aluminum GPS – Plum Sport Loop Band,108000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Ultra 2 49MM Titanium Black GPS + Cellular – Black Trail Loop Band,185000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch SE 2nd Gen 44MM Starlight Aluminum GPS – Green Sport Loop Band,75990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Ultra 2 49MM Natural Titanium GPS + Cellular – Tan Alpine Loop Band,229000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Series 10 42MM Jet Black Aluminum GPS – Ink Sport Loop Band,105900,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Ultra 2 49MM Black Titanium GPS + Cellular – Titanium Black Milanese Loop Band,257990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Ultra 2 49MM Natural GPS + Cellular – Blue Trail Loop Band,236500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Ultra 2 49MM Black GPS + Cellular – Dark Green Alpine Loop Band,216000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Ultra 2 49MM Black GPS + Cellular – Navy Ocean Band,242500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Ultra 2 49MM Natural GPS + Cellular – Navy Ocean Band,237000,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Ultra 2 49MM Titanium Black GPS + Cellular – Black Ocean Band,223990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Series 10 42MM Rose Gold Aluminum GPS – Light Blush Sport Band,105500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Series 10 46MM Jet Black Aluminum GPS – Black Sport Band,115990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Series 10 42MM Jet Black Aluminum GPS – Black Sport Band,105900,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Series 10 42MM Silver Aluminum GPS – Denim Sport Band,105500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Series 10 46MM Silver Aluminum GPS – Denim Sport Band,114900,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Series 9 45MM Midnight Aluminum GPS – Midnight Sport Band,99990,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Series 9 41MM Midnight Aluminum GPS – Midnight Sport Band,99500,,False,2026-03-12 10:28:23
+LifeMobile,LifeMobile Watch,Apple Watch Ultra 2 49MM Titanium GPS + Cellular – Orange Ocean Band,299989,,False,2026-03-12 10:28:23
